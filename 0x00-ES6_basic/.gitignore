@@ -1,6 +1,1 @@
-node_modules/*
-package.json
-package-lock.json
-babel.config.js
 *-main.js
-.eslintrc.js
