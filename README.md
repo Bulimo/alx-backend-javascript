@@ -6,6 +6,7 @@ Each folder in the repository covers particular concepts in back-end
 development.
 
     . 0x00-ES6_basic
+    . 0x01-ES6_promise
 
 ## Authors
 
