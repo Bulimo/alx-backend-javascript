@@ -15,9 +15,10 @@ export default class Building {
     return this._sqft;
   }
 
-  // eslint-disable-next-line class-methods-use-this
   evacuationWarningMessage() {
     // Throw an error if the method is not overridden by a subclass
-    throw new Error('Class extending Building must override evacuationWarningMessage');
+    if (this.constructor !== Building) {
+      throw new Error('Class extending Building must override evacuationWarningMessage');
+    }
   }
 }
