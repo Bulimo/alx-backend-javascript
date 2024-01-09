@@ -9,7 +9,7 @@ export default function cleanSet(set, startString) {
   //   .join('-');
   const filteredValues = Array.from(set)
     .filter((value) => value && value.startsWith(startString) && startString.length > 0)
-    .map((value) => value.slice(startString.length))
+    .map((value) => value.replace(startString, ''))
     .join('-');
 
   return filteredValues;
