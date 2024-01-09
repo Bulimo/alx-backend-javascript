@@ -1,6 +1,6 @@
 export default function cleanSet(set, startString) {
   if (!(set instanceof Set) || !startString || typeof startString !== 'string') {
-    return "";
+    return '';
   }
   // if (startString === '') return '';
   // const filteredValues = Array.from(set)
