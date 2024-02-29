@@ -9,6 +9,8 @@ function calculateNumber(type, a, b) {
       return roundA - roundB
     case 'DIVIDE':
       return roundB === 0 ? 'Error' : roundA / roundB;
+    default:
+      return 'Invalid operation type';
   }
 }
 

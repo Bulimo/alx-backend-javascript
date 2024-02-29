@@ -3,7 +3,7 @@ const chai = require('chai');
 const expect = chai.expect;
 
 describe('calculateNumber', () => {
-  describe('SUM operation', () => {
+  describe('SUM operation +ve', () => {
     it('should add rounded numbers', () => {
       expect(calculateNumber('SUM', 1.4, 2.6)).to.equal(4);
       expect(calculateNumber('SUM', 0.5, 2.3)).to.equal(3);
@@ -11,11 +11,27 @@ describe('calculateNumber', () => {
     });
   });
 
-  describe('SUBTRACT operation', () => {
+  describe('SUM operation -ve', () => {
+    it('should add rounded numbers', () => {
+      expect(calculateNumber('SUM', -1.4, -2.6)).to.equal(-4);
+      expect(calculateNumber('SUM', -0.5, -2.3)).to.equal(-2);
+      expect(calculateNumber('SUM', -2.1, 3.8)).to.equal(2);
+    });
+  });
+
+  describe('SUBTRACT operation +ve', () => {
     it('should subtract rounded b from a', () => {
       expect(calculateNumber('SUBTRACT', 5.5, 2.3)).to.equal(4);
       expect(calculateNumber('SUBTRACT', 0.5, 2.3)).to.equal(-1);
       expect(calculateNumber('SUBTRACT', 2.1, 3.8)).to.equal(-2);
+    });
+  });
+
+  describe('SUBTRACT operation -ve', () => {
+    it('should subtract rounded b from a', () => {
+      expect(calculateNumber('SUBTRACT', -5.5, -2.3)).to.equal(-3);
+      expect(calculateNumber('SUBTRACT', -0.5, 2.3)).to.equal(-2);
+      expect(calculateNumber('SUBTRACT', 2.1, -3.8)).to.equal(6);
     });
   });
 
