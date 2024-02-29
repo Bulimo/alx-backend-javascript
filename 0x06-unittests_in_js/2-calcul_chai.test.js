@@ -13,7 +13,7 @@ describe('calculateNumber', () => {
 
   describe('SUM operation -ve', () => {
     it('should add rounded numbers', () => {
-      expect(calculateNumber('SUM', -1.4, -2.6)).to.equal(-4);
+      expect(calculateNumber('SUM', -1.4, -2.6)).to.deep.equal(-4);
       expect(calculateNumber('SUM', -0.5, -2.3)).to.equal(-2);
       expect(calculateNumber('SUM', -2.1, 3.8)).to.equal(2);
     });
